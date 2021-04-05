@@ -542,31 +542,31 @@ let chineseTokenizer;
 $(document).ready(function () {
   console.log('Loading files');
   console.log('0%');
-  
+
   fetch('./dict/cedict_1_0_ts_utf-8_mdbg.txt').then(res => res.text()).then(txt => {
     cedict = txt;
     cedictLoaded = true;
     init();
   });
-  
+
   fetch('./LeungManTao.txt').then(res => res.text()).then(txt => {
     lmtText = txt;
     lmtTextLoaded = true;
     init();
   });
-  
+
   fetch('./dict/jpDict.json').then(res => res.json()).then(js => {
     jpDict = js;
     jpDictLoaded = true;
     init();
   });
-  
+
   fetch('./dict/pyDict.json').then(res => res.json()).then(js => {
     pyDict = js;
     pyDictLoaded = true;
     init();
   });
-  
+
 });
 
 function init() {
@@ -581,7 +581,7 @@ function init() {
     $("#para").text("正在初始化模型 ...");
 
     chineseTokenizer = new ChineseTokenizer(cedict);
-  
+
     const buildChineseNgram = function (text, n) {
       let root = new Node(null);
       let token = chineseTokenizer.tokenize(text).map(o => o.text);
@@ -603,9 +603,9 @@ function init() {
       }
       return root;
     }
-  
+
     chineseNgramModel = buildChineseNgram(lmtText, chineseNgramN);
-  
+
     leungManTao = new Display(postProcess(generateChineseSentences(chineseNgramModel, chineseNgramN, 10)));
 
     console.log(chineseNgramModel, leungManTao);
