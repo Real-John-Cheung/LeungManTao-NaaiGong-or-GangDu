@@ -35,17 +35,36 @@ body {
     display: flex;
     display: -webkit-flex;
     flex: 0 0 auto;
+    flex-direction: column;
+    text-align: left;
+    margin: auto;
+}
+
+.content {
+    width: 100%;
+    min-width: 650px;
+    display: flex;
+    display: -webkit-flex;
+    flex: 0 0 auto;
     flex-direction: row-reverse;
     text-align: left;
     margin: auto;
 }
 
 .title {
+    width: 15%;
     font-family: 'Noto Sans HK';
     writing-mode: vertical-rl;
     font-weight: 700;
-    margin-left: 20px;
     padding-top: 20px;
+}
+
+.paragraph {
+    width: 85%;
+    font-family: 'Noto Sans HK', 'Noto Sans TC', 'Noto Sans SC';
+    font-weight: 400;
+    font-size: 16px;
+    text-align: justify;
 }
 
 .ch {
@@ -80,6 +99,43 @@ body {
     min-width: 600px;
     margin: auto;
     text-align: right;
+}
+
+.timer-wrapper {
+    width: 100%;
+    min-width: 650px;
+    display: flex;
+    display: -webkit-flex;
+    flex: 0 0 auto;
+    flex-direction: row-reverse;
+    text-align: left;
+    margin: auto;
+}   
+
+.empty{
+    width: 15%;
+    font-family: 'Noto Sans HK';
+    writing-mode: vertical-rl;
+    font-weight: 700;
+    padding-top: 20px;
+}
+
+#timer{
+    float: right;
+}
+
+.shown-timer{
+    height: 5px;
+    background: #fff;
+    overflow: hidden;
+    width: 85%;
+}
+
+.bar{
+    height: 0.5px;
+    background: #000;
+    animation: roundtime calc(var(--duration) * 1ms) linear forwards;
+    transform-origin: right center;
 }
 
 .changeViaPinyin {
@@ -122,11 +178,12 @@ body {
     }
 }
 
-.paragraph {
-    font-family: 'Noto Sans HK', 'Noto Sans TC', 'Noto Sans SC';
-    font-weight: 400;
-    font-size: 16px;
-}
+@keyframes roundtime {
+    to {
+      /* More performant than `width` */
+      transform: scaleX(0);
+    }
+  }
 
 @font-face {
     font-family: 'Noto Sans TC';
