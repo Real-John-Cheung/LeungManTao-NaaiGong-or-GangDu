@@ -26,6 +26,8 @@ class Display {
 
 const chineseNgramN = 3;
 
+const TIMEGAP = 240000; // 4min
+
 const generateChineseSentences = function (model, nValue, noOfSentence, startWith, sth = true, includeStartWith = true, strictStart = true) {
   // helpers-----------------------
   let getRandChild = function (parentNode) {
@@ -511,6 +513,11 @@ const regenerate = function () {
   }
   $("#para").empty();
   $("#para").append(leungManTao.display());
+  $('#timer').removeAttr('style');
+  $('#timer').removeClass('shown-timer');
+  $('#timer').width();
+  $('#timer').addClass('shown-timer');
+  $('#timer').css('--duration', TIMEGAP);
 }
 
 const randInt = function (a, b) {
@@ -519,12 +526,17 @@ const randInt = function (a, b) {
 }
 
 const intervals = function () {
-  setInterval(regenerate, 300000);
+  setInterval(function () {
+    regenerate();
+  }, TIMEGAP);
   setInterval(function () {
     leungManTao.change();
     $("#para").empty();
     $("#para").append(leungManTao.display());
   }, 2500);
+    $('#timer').removeClass('shown-timer');
+    $('#timer').addClass('shown-timer');
+    $('#timer').css('--duration', TIMEGAP);
 }
 
 let cedict;
