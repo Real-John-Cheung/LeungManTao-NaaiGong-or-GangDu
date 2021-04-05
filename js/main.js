@@ -20,7 +20,7 @@ class Display {
   }
 
   display() {
-    return `<p>${this.result.join('')}`;
+    return `${this.result.join('')}`;
   }
 }
 
@@ -149,6 +149,9 @@ const postProcess = function (array) {
   };
   for (let i = 0; i < array.length; i++) {
     let currentToken = array[i];
+    if (i == 0 && PUNCT.test(currentToken)){
+      continue;
+    }
     if (openedWith == undefined && ENDRE.test(currentToken)) {
       //no open close quo 
       continue;
