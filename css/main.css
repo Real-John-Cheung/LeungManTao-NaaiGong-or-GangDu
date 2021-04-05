@@ -132,7 +132,7 @@ body {
 }
 
 .bar{
-    height: 0.5px;
+    height: 1px;
     background: #000;
     animation: roundtime calc(var(--duration) * 1ms) linear forwards;
     transform-origin: right center;
