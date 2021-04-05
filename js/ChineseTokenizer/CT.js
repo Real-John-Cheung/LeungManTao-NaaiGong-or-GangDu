@@ -209,4 +209,3 @@ class Trie{
       }
 }
 
-export default ChineseTokenizer

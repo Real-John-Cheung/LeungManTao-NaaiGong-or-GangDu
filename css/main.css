@@ -1,15 +1,15 @@
-html{
+html {
     background: #fff;
     height: 100%;
 }
 
-body{
+body {
     color: #000;
     height: 90%;
 }
 
 
-.wrapper{
+.wrapper {
     width: 100%;
     height: 100%;
     display: flex;
@@ -17,14 +17,14 @@ body{
     align-items: center;
 }
 
-.wrapper2{
+.wrapper2 {
     width: 100%;
     display: flex;
     flex-direction: row;
     margin: auto;
 }
 
-.container{
+.container {
     width: 50%;
     min-width: 650px;
     height: auto;
@@ -34,47 +34,60 @@ body{
     margin: auto;
 }
 
-.title{
+.title {
     font-family: 'Noto Sans HK';
     writing-mode: vertical-rl;
     font-weight: 700;
     margin-left: 20px;
+    padding-top: 20px;
 }
 
-.changeViaPinyin{
+.ch{
+    font-family: 'Noto Sans HK', 'Noto Sans TC', 'Noto Sans SC' ;
+}
+  
+
+.changeViaPinyin {
     color: #000000;
     animation-name: pinyin;
     animation-duration: 1.5s;
-  }
-  @keyframes pinyin{
-      0%{
-          color: #693636;
-      }
-      30%{
-          color: #693636;
-      }
-      100%{
-          color: #000000;
-      }
-  }
-  .changeViaJyutpin{
+}
+
+@keyframes pinyin {
+    0% {
+        color: #693636;
+    }
+
+    30% {
+        color: #693636;
+    }
+
+    100% {
+        color: #000000;
+    }
+}
+
+.changeViaJyutpin {
     color: #000000;
     animation-name: jyutpin;
     animation-duration: 1.5s;
-  }
-  @keyframes jyutpin{
-      0%{
-          color: #4b5f80;
-      }
-      30%{
-          color: #4b5f80;
-      }
-      100%{
-          color: #000000;
-      }
-  }
+}
 
-.paragraph{
+@keyframes jyutpin {
+    0% {
+        color: #4b5f80;
+    }
+
+    30% {
+        color: #4b5f80;
+    }
+
+    100% {
+        color: #000000;
+    }
+}
+
+.paragraph {
     font-family: 'Noto Sans HK', 'Noto Sans TC', 'Noto Sans SC';
     font-weight: 400;
     font-size: 16px;
@@ -85,58 +98,67 @@ body{
     font-style: normal;
     font-weight: 400;
     src: url(https://fonts.gstatic.com/s/synemono/v3/@CgsKCVN5bmUgTW9ubxAJIAU=.woff2) format('woff2')
-  }
-  @font-face {
-     font-family: 'Noto Sans TC';
-     font-style: normal;
-     font-weight: 400;
-     src: url(//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Regular.woff2) format('woff2'),
-   }
-  @font-face {
-     font-family: 'Noto Sans TC';
-     font-style: normal;
-     font-weight: 500;
-     src: url(https://fonts.gstatic.com/s/notosanstc/v11/-nFkOG829Oofr2wohFbTp9i9ywIfDNdU.woff2) format('woff2'),
-   }
-  @font-face {
-     font-family: 'Noto Sans TC';
-     font-style: normal;
-     font-weight: 700;
-     src: url(https://fonts.gstatic.com/s/notosanstc/v11/-nFkOG829Oofr2wohFbTp9i9gwQfDNdU.woff2) format('woff2'),
-   }
-  @font-face {
-     font-family: 'Noto Sans SC';
-     font-style: normal;
-     font-weight: 400;
-     src: url(https://fonts.gstatic.com/s/notosanssc/v12/k3kXo84MPvpLmixcA63oeALRLoKI.woff2) format('woff2'),
-   }
-  @font-face {
-     font-family: 'Noto Sans SC';
-     font-style: normal;
-     font-weight: 500;
-     src: url(https://fonts.gstatic.com/s/notosanssc/v12/k3kIo84MPvpLmixcA63oeALZ3aGd9i_7.woff2) format('woff2'),
-   }
-  @font-face {
-     font-family: 'Noto Sans SC';
-     font-style: normal;
-     font-weight: 700;
-     src: url(https://fonts.gstatic.com/s/notosanssc/v12/k3kIo84MPvpLmixcA63oeALZlaed9i_7.woff2) format('woff2'),
-   }
-  @font-face {
-     font-family: 'Noto Sans HK';
-     font-style: normal;
-     font-weight: 400;
-     src: url(https://fonts.gstatic.com/s/notosanshk/v6/nKKQ-GM_FYFRJvXzVXaAPe9RM3p2.woff2) format('woff2'),
-   }
-  @font-face {
-     font-family: 'Noto Sans HK';
-     font-style: normal;
-     font-weight: 500;
-     src: url(https://fonts.gstatic.com/s/notosanshk/v6/nKKP-GM_FYFRJvXzVXaAPe9ZwFljHc_7.woff2) format('woff2'),
-   }
-  @font-face {
-     font-family: 'Noto Sans HK';
-     font-style: normal;
-     font-weight: 700;
-     src: url(https://fonts.gstatic.com/s/notosanshk/v6/nKKP-GM_FYFRJvXzVXaAPe9ZiF9jHc_7.woff2) format('woff2'),
-   }
+}
+
+@font-face {
+    font-family: 'Noto Sans TC';
+    font-style: normal;
+    font-weight: 400;
+    src: url(//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Regular.woff2) format('woff2'),
+}
+
+@font-face {
+    font-family: 'Noto Sans TC';
+    font-style: normal;
+    font-weight: 500;
+    src: url(https://fonts.gstatic.com/s/notosanstc/v11/-nFkOG829Oofr2wohFbTp9i9ywIfDNdU.woff2) format('woff2'),
+}
+
+@font-face {
+    font-family: 'Noto Sans TC';
+    font-style: normal;
+    font-weight: 700;
+    src: url(https://fonts.gstatic.com/s/notosanstc/v11/-nFkOG829Oofr2wohFbTp9i9gwQfDNdU.woff2) format('woff2'),
+}
+
+@font-face {
+    font-family: 'Noto Sans SC';
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://fonts.gstatic.com/s/notosanssc/v12/k3kXo84MPvpLmixcA63oeALRLoKI.woff2) format('woff2'),
+}
+
+@font-face {
+    font-family: 'Noto Sans SC';
+    font-style: normal;
+    font-weight: 500;
+    src: url(https://fonts.gstatic.com/s/notosanssc/v12/k3kIo84MPvpLmixcA63oeALZ3aGd9i_7.woff2) format('woff2'),
+}
+
+@font-face {
+    font-family: 'Noto Sans SC';
+    font-style: normal;
+    font-weight: 700;
+    src: url(https://fonts.gstatic.com/s/notosanssc/v12/k3kIo84MPvpLmixcA63oeALZlaed9i_7.woff2) format('woff2'),
+}
+
+@font-face {
+    font-family: 'Noto Sans HK';
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://fonts.gstatic.com/s/notosanshk/v6/nKKQ-GM_FYFRJvXzVXaAPe9RM3p2.woff2) format('woff2'),
+}
+
+@font-face {
+    font-family: 'Noto Sans HK';
+    font-style: normal;
+    font-weight: 500;
+    src: url(https://fonts.gstatic.com/s/notosanshk/v6/nKKP-GM_FYFRJvXzVXaAPe9ZwFljHc_7.woff2) format('woff2'),
+}
+
+@font-face {
+    font-family: 'Noto Sans HK';
+    font-style: normal;
+    font-weight: 700;
+    src: url(https://fonts.gstatic.com/s/notosanshk/v6/nKKP-GM_FYFRJvXzVXaAPe9ZiF9jHc_7.woff2) format('woff2'),
+}
